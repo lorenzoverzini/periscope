@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-feature-settings: "ss03";
+    font-size: 1rem;
+    line-height: 1.4;
+    color: $black;
+}
+
+body, h1, h3, h4, p, select, .buttons-text, .titleCards, .titleMoments, .bodyMoments {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-of-type{
+        margin-bottom: 0px;
+    }
+}
+
+.buttons-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.titleCards {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.mono {
+    font-family: 'DM Mono', monospace;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.thick {
+    font-weight: 700;
+}
+
+.bodyMoments {
+
+    p, li {
+        font-size: 20px;
+        line-height: 1.4;
+
+        &:last-of-type {
+            margin-bottom: 48px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px 0px 0px 1rem;
+        list-style-position: outside;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .references li {
+        @extend .mono;
+    }
+}

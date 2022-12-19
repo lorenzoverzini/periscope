@@ -1,0 +1,116 @@
+$numTips: 15;
+$widthTip: 339px;
+$scaleColor: #D6006D;
+
+#toolTip {
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+    background: $black;
+    width: $widthTip;
+    min-height: 200px;
+    border-radius: 16px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.1s linear, visibility 0.1s linear;
+    @extend .shadow-l2;
+
+    #containerCxElements{
+        width: $widthTip * $numTips;
+        display: flex;
+
+        .CxElement {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: $widthTip;
+            padding: 24px;
+            
+            .references{
+                display: flex;
+                margin-bottom: 24px;
+
+                .CxNumber {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    padding: 0px 18px;
+                    @extend .thick;
+                    margin-right: 8px;
+                }
+
+                .CxScale {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+
+                    .scale1, .scale2, .scale3, .scale4 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border: 2px solid rgba(white, 0.25);
+                        border-radius: 20px;
+                    }
+
+                    .scale1 {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    .scale2 {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .scale3 {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .scale4 {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            .CxTitle {
+                @extend .thick;
+                margin-bottom: 8px;
+            }
+
+            .CxTag {
+                display: inline-block;
+                color: white;
+                @extend .thick;
+                @extend .small;
+                margin-top: 24px;
+                background-color: rgba(white, 0.25);
+                padding: 4px 16px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.revealToolTip {
+    visibility: visible !important;
+}
+
+.selectedScale {
+    border-color: $scaleColor !important;
+    background-color: $scaleColor !important;
+}

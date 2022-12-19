@@ -1,0 +1,17 @@
+.slideElements {
+    transition: transform 0.9s cubic-bezier(0.69,0,0.07,1), border-radius 1.2s ease, opacity 1s linear,;
+}
+
+.showTrail {
+    #contents {
+        transform-origin: center;
+        transform: scale(0.9) translateY(50px);
+        opacity: 0.2;
+        border-radius: 48px;
+    }
+
+    #trail {
+        border-radius: 0px;
+        transform: translateY(-100%);
+    }
+}

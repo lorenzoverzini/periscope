@@ -1,0 +1,121 @@
+nav {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 72px;
+    height: 72px;
+    z-index: 5;
+    border-radius: 40px;
+    background-color: $hl;
+    @extend .shadow-l1;
+    transition: all 0.44s cubic-bezier(0.86,0,0.07,1);
+    overflow: hidden;
+}
+
+.openNav {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 360px !important;
+    height: calc(100% - 32px) !important;
+    border-radius: 16px !important;
+
+    .openCloseIcon {
+        right: 16px;
+        bottom: 16px;
+        transform: rotate(45deg);
+        border: 2px solid white;
+
+        &::before, &::after {
+            margin: 0px;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+}
+
+.revealIndex {
+    .indexContents {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+.openCloseIcon {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 72px;
+    height: 72px;
+    z-index: 2;
+    border-radius: 40px;
+    border: 2px solid rgba(white, 0);
+    transition: all 0.44s cubic-bezier(0.86,0,0.07,1);
+    cursor: pointer;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 26px;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        transition: all 0.44s cubic-bezier(0.86,0,0.07,1);
+    }
+
+    &::before {
+        margin-top: -4px;
+    }
+
+    &::after {
+        margin-top: 4px;
+    }
+}
+
+.indexContents {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.44s cubic-bezier(0.86,0,0.07,1);
+    overflow: auto;
+
+    ul {
+        margin: 0px;
+        padding: 24px;
+        color: white;
+        list-style: none;
+
+        li{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            &:hover {
+                .indexLabel {
+                    border-bottom-color: rgba(white, 1);
+                }
+            }
+
+            .indexNum {
+                @extend .mono;
+                @extend .small;
+                margin-right: 16px;
+            }
+
+            .indexLabel {
+                @extend h4;
+                @extend .medium;
+                border-bottom: 1px solid rgba(white, 0.2);
+                transition: border 0.3s ease;
+            }
+        }
+    }
+}

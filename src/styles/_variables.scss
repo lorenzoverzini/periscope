@@ -1,0 +1,20 @@
+// COLORS
+$periscopeHl: blue;
+$bgk: #f9f9f9;
+$black: #212121;
+$hl: $black;
+$col-firstTimer: #FFB600;
+$col-repeaters: #993DBB;
+$col-others: #00AC69;
+
+// APP SIZES
+$widthSidebar: 200px;
+$maxCardWidth: 340px;
+
+// STEPS
+$stepMargin : 100px;
+$minBlockWidth : 372px;
+$minColWidth : $minBlockWidth * 2;
+$blockMargin : 40px;
+$blobkNumber: 48; //47;
+$totalWidth : $minBlockWidth * $blobkNumber;

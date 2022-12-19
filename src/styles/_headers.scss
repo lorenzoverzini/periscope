@@ -1,0 +1,139 @@
+// HEADERS
+#appHeader {
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+    width: $totalWidth + $widthSidebar;
+    display: flex;
+    background-color: $bgk;
+    border-top: 3px solid $periscopeHl;
+
+    .header-static {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: $widthSidebar;
+        height: 144px;
+        background-color: $bgk;
+        border-right: 1px solid $black;
+    }
+
+    .header-dinamic{
+        width: $totalWidth;
+        flex-direction: column;
+    }
+}
+
+.label_goals, .label_journey {
+    @extend .mono;
+    @extend .small;
+    padding: 8px 0px 0px 8px;
+    border-bottom: 1px solid $black;
+}
+
+.label_goals {
+    height: 40px;
+}
+
+.label_journey {
+    flex-grow: 2;
+}
+
+.l1 {
+    height: 40px;
+    display: inline-flex;
+    color: $black;
+
+    .header-goal {
+        @extend .mono;
+        @extend .small;
+        border-bottom: 1px solid $black;
+        border-right: 1px solid $black;
+    }
+}
+
+.l2 {
+    height: 104px;
+    display: flex;
+    color: $black;
+    border-bottom: 1px solid $black;
+
+    .wrapper-headers {
+        display: flex;
+        flex-direction: column;
+
+        .header-h1 {
+            font-family: 'DM Sans', sans-serif;
+            @extend .thick;
+            flex-grow: 2;
+            font-size: 26px;
+            //border-bottom: 1px solid $black;
+            border-right: 1px solid $black;
+        }
+
+        .subs {
+            display: flex;
+
+            .wrapper-subs {
+    
+                .header-h2 {
+                    font-family: 'DM Sans', sans-serif;
+                    @extend .thick;
+                    @extend h4;
+                    height: 40px;
+                    border-top: 1px solid $black;
+                    border-right: 1px solid $black;
+                }
+    
+                .wrapper-h3 {
+                    display: flex;
+    
+                    .header-h3 {
+                        @extend .mono;
+                        @extend .small;
+                        height: 40px;
+                        border-right: 1px solid $black;
+                    }
+                }
+                
+            }
+        }
+
+    }
+}
+
+.stickyHeader {
+    position: sticky;
+    display: inline-block;
+    left: $widthSidebar;
+    padding: 8px 8px;
+    // background-color: yellow !important;
+    // color: black;
+}
+
+// TIMELINE
+
+.step{
+    position: relative;
+    height: 600px;
+    //background-color: gray;
+    margin-right: $stepMargin;
+    margin-bottom: $stepMargin;
+
+    &__contents {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+.block {
+    margin-right: $blockMargin;
+    background-color: white;
+    border-radius: 8px;
+    min-height: 266px;
+    width: $minBlockWidth;
+}
